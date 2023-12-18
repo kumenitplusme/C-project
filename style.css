@@ -61,6 +61,57 @@ section{
     max-width: auto;
     margin: 0 auto;
 }
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    border-radius: .5rem;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    color: var(--background);
+    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn,
+.option-btn,
+.delete-btn{
+    display: block;
+    width: 100%;
+}
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn{
+    display: inline-block;
+}
+.btn,
+.inline-btn{
+    background: var(--secondary);
+    transition: .5s;
+}
+.option-btn,
+.inline-option-btn{
+    background: var(--primary);
+    transition: .5s;
+}
+.delete-btn,
+.inline-delete-btn{
+    background-color: var(--accent);
+    transition: .5s;
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover{
+    background: var(--background);
+}
 .header{
     background-color: var(--background);
     border-bottom: var(--text);
@@ -107,7 +158,7 @@ section{
     background: none;
 }
 .header .flex .icon i{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--primary);
     border-radius: 5rem;
     height: 4.5rem;
@@ -124,6 +175,43 @@ section{
 }
  #search-btn{
     display: none;
+}
+.header .flex .profile{
+    position: absolute;
+    top: 120%; right: 2rem;
+    background-color: var(--background);
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    padding: 2rem;
+    text-align: center;
+    width: 30rem;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: .2s linear;
+    box-shadow: 0 0 50px var(--text);
+}
+.header .flex .profile.active{
+    transform: scale(1);
+}
+.header .flex .profile img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+.header .flex .profile h3{
+    font-size: 2rem;
+    color: var(--text);
+}
+.header .flex .profile span{
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+.flex-btn{
+    display: flex;
+    gap: 1rem;
 }
 .wave {
     position: absolute;
@@ -145,4 +233,3 @@ section{
 .wave .shape-fill {
     fill: var(--background);
 }
-    
