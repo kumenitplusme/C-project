@@ -111,6 +111,7 @@ section{
 .inline-option-btn:hover,
 .inline-delete-btn:hover{
     background: var(--background);
+    color: var(--text);
 }
 .header{
     background-color: var(--background);
