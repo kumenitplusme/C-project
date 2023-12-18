@@ -1,6 +1,148 @@
+:root{
+    --text: #e2e6fc;
+    --background: #010310;
+     --bg2: #17181e; 
+    --primary: #8092f3;
+    --secondary: #970e34;
+    --accent: #ea5d23;
+    
+--linearPrimarySecondary: linear-gradient(#adb0c7, #5c4362);
+--linearPrimaryAccent: linear-gradient(#adb0c7, #aa82a8);
+--linearSecondaryAccent: linear-gradient(#5c4362, #aa82a8);
+--radialPrimarySecondary: radial-gradient(#adb0c7, #5c4362);
+--radialPrimaryAccent: radial-gradient(#adb0c7, #aa82a8);
+--radialSecondaryAccent: radial-gradient(#5c4362, #aa82a8);
+
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    /* font-family: 'Alata', sans-serif;
+font-family: 'Alfa Slab One', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lobster', sans-serif; */
+font-family: 'Manrope', sans-serif;
+/* font-family: 'Rajdhani', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+}
+
+*::selection{
+    background-color: var(--accent);
+    color: var(--text);
+}
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--text);
+    border-radius: 17rem;
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+}
+body{
+    color: #fff;
+    background: var(--bg2);
+    height: 100vmax;
+    width: auto;
+}
+section{
+    padding: 2rem;
+    max-width: auto;
+    margin: 0 auto;
+}
+.header{
+    background-color: var(--background);
+    border-bottom: var(--text);
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 10rem;
+}
+.header .flex{
+    padding :1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .flex .logo{
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: bolder;
+}
+.header .flex .search-form{
+    width: 50rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: .7rem 1.7rem;
+    background: var(--background);
+    box-shadow: 0 0 19px var(--primary);
+    transform: .5s;
+
+}
+.header .flex .search-form input{
+    width: 100%;
+    background: none;
+    font-size: 1.3rem;
+    color: var(--text);
+}
+
+.header .flex .search-form button{
+    font-size: 2rem;
+    color: var(--text);
+    cursor: pointer;
+    background: none;
+}
+.header .flex .icon i{
+    font-size: 2rem;
+    color: var(--primary);
+    border-radius: 5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    width: 4.5rem;
+    line-height: 4.4rem;
+    text-align: center;
+    margin-left: .5rem;
+    transition: .5s;
+}
+.header .flex .icon i:hover{
+    background:  var(--accent);
+    color: var(--background);
+}
+ #search-btn{
+    display: none;
+}
+.wave {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 200px;
+}
+
+.wave .shape-fill {
+    fill: var(--background);
 }
     
