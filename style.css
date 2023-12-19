@@ -1,7 +1,7 @@
 :root{
     --text: #e2e6fc;
     --background: #010310;
-     --bg2: #17181e; 
+     --bg2: #131420; 
     --primary: #8092f3;
     --secondary: #970e34;
     --accent: #ea5d23;
@@ -119,7 +119,7 @@ section{
     position: sticky;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    height: 10rem;
+    height: 15rem;
 }
 .header .flex{
     padding :1.5rem 2rem;
@@ -139,7 +139,7 @@ section{
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    padding: .7rem 1.7rem;
+    padding: 1.2rem 2rem;
     background: var(--background);
     box-shadow: 0 0 19px var(--primary);
     transform: .5s;
@@ -148,12 +148,12 @@ section{
 .header .flex .search-form input{
     width: 100%;
     background: none;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: var(--text);
 }
 
 .header .flex .search-form button{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--text);
     cursor: pointer;
     background: none;
@@ -216,7 +216,7 @@ section{
 }
 .wave {
     position: absolute;
-    top: 10rem;
+    top: 14.7rem;
     left: 0;
     width: 100%;
     overflow: hidden;
