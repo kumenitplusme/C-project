@@ -55,6 +55,7 @@ body{
     background: var(--bg2);
     height: 100vmax;
     width: auto;
+    /* padding-left: 6rem; */
 }
 section{
     padding: 2rem;
@@ -134,12 +135,12 @@ section{
     font-weight: bolder;
 }
 .header .flex .search-form{
-    width: 50rem;
+    width: 60rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    padding: 1.2rem 2rem;
+    padding: .3rem 2rem;
     background: var(--background);
     box-shadow: 0 0 19px var(--primary);
     transform: .5s;
@@ -148,12 +149,12 @@ section{
 .header .flex .search-form input{
     width: 100%;
     background: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: var(--text);
 }
 
 .header .flex .search-form button{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text);
     cursor: pointer;
     background: none;
@@ -181,16 +182,16 @@ section{
     position: absolute;
     top: 120%; right: 2rem;
     background-color: var(--background);
-    border-top-left-radius: 5rem;
-    border-bottom-right-radius: 5rem;
-    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     padding: 2rem;
     text-align: center;
     width: 30rem;
     transform: scale(0);
     transform-origin: top right;
     transition: .2s linear;
-    box-shadow: 0 0 50px var(--text);
+    box-shadow: 0 0 10px var(--text);
 }
 .header .flex .profile.active{
     transform: scale(1);
@@ -222,6 +223,7 @@ section{
     overflow: hidden;
     line-height: 0;
     z-index: -1;
+    
 }
 
 .wave svg {
@@ -229,8 +231,73 @@ section{
     display: block;
     width: calc(103% + 1.3px);
     height: 200px;
+   
 }
 
 .wave .shape-fill {
     fill: var(--background);
+    
+}
+.side-bar{
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 7rem;
+    top: 0; left: 0;
+    background: var(--background);
+    /* optional*/
+    /* box-shadow: 0 0 10px var(--accent); */
+    z-index: 10;
+    transition: .5s linear;
+}
+.side-bar.active{
+    left: -30rem;
+}
+.side-bar .navbar{
+    margin-top: 30rem;
+}
+.side-bar .navbar a{
+    width: 100%;
+    display: block;
+    margin: 0rem 0;
+    font-size: 2.3rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: .5s ;
+    text-align: center;
+    border-radius: 50%;
+}
+.side-bar .navbar a i{
+    color: var(--primary);
+    transition: .2s ;
+     
+}
+.side-bar .navbar a span{
+    font-size: 1.2rem;
+     
+}
+.side-bar .navbar a:hover{
+    background: var(--accent);
+    color: var(--background);
+    border-radius: 20%;
+    font-weight: bolder;
+}
+.side-bar .navbar a:hover i{
+    color: var(--background);
+}
+
+.footer{
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background-color: var(--background); */
+    border-top: var(--text);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--primary);
+    font-size: 2rem;
+    margin-top: 2rem;
+    z-index: 10000;
+    /* cursor:progress; */
 }
